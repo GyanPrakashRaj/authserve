@@ -3,3 +3,11 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const User = mongoose.model("User");
 const jwt = require('jsonwebtoken');
+
+//
+require('dotenv').config();
+//
+router.post('.signup',(req,res)=>{
+    res.send('this is signup page');
+})
+module.exports = router;
