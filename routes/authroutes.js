@@ -10,7 +10,7 @@ require('dotenv').config();
 
 router.post('/signup',(req,res)=>{
     res.send('this is signup page page from authroutes');
-    //console.log(req.body);
+    console.log('sent by client - ', req.body);
     const  {name, email, password, dob} = req.body;
     if (!email || !password || !name || !dob){
         return res.status(422).send({error: "please fill all details"});
@@ -20,7 +20,7 @@ router.post('/signup',(req,res)=>{
     .then(
         async (saveduser) =>{
             if (saveduser){
-            return res.status(422).send({error: "email Exist"});
+            return res.status(422).send({error: "Email Exist"});
         }
         const user = new user({
             name,
