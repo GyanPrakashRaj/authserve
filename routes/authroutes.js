@@ -8,7 +8,8 @@ require('dotenv').config();
 //
 
 
-router.post('./signup',(req,res)=>{
+router.post('/signup',(req,res)=>{
     res.send('this is signup page page from authroutes');
+    console.log(req.body);
 })
 module.exports = router;
