@@ -15,10 +15,6 @@ app.use(authroutes);
 app.get('/', (req, res)=>{
     res.send('SERVER HOME PAGE');
 })
-// app.post('/signup',(req,res)=>{
-//     console.log(req.body);
-//     res.send('This is signUp Page from index.js dir');
-// })
 app.listen(port, () => {
     console.log('server is running on port ${port}');
 })
